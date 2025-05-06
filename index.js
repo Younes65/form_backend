@@ -78,7 +78,7 @@ app.post("/submit", upload.single("fileToUpload"), (req, res) => {
   const file = req.file;
   const mailOptions = {
     from: "ibrahimyounes646@gmail.com",
-    to: ["ibrahimyounes646@gmail.com", "marwanmamdouh159@gmail.com"],
+    to: ["ibrahimyounes646@gmail.com", "digitalmedia@ajman.ae"],
     subject: "Thank you for your submission!",
     html: generateEmailTemplate(data, file),
     attachments: file
