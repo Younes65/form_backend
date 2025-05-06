@@ -9,7 +9,7 @@ app.use(express.json());
 const upload = multer({ storage: multer.memoryStorage() });
 
 const corsOption = {
-  origin: ["https://application-form-gamma-seven.vercel.app"],
+  origin: "https://application-form-gamma-seven.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
