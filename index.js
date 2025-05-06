@@ -5,11 +5,13 @@ const cors = require("cors");
 const multer = require("multer");
 
 const app = express();
-app.use(express.json());
 const upload = multer({ storage: multer.memoryStorage() });
 
 const corsOption = {
-  origin: "https://application-form-gamma-seven.vercel.app",
+  origin: [
+    "https://application-form-gamma-seven.vercel.app",
+    "http://127.0.0.1:5500",
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
@@ -76,7 +78,7 @@ app.post("/submit", upload.single("fileToUpload"), (req, res) => {
   const file = req.file;
   const mailOptions = {
     from: "ibrahimyounes646@gmail.com",
-    to: ["ibrahimyounes646@gmail.com", "digitalmedia@ajman.ae"],
+    to: ["ibrahimyounes646@gmail.com", "marwanmamdouh159@gmail.com"],
     subject: "Thank you for your submission!",
     html: generateEmailTemplate(data, file),
     attachments: file
