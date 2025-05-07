@@ -36,7 +36,7 @@ function generateEmailTemplate(data, file) {
   <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
     <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
       <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://tinyurl.com/294h7954" alt="Company Logo" style="max-width: 150px;">
+        <img src="https://tinyurl.com/294h7954" alt="Ajman media" style="max-width: 150px;">
       </div>
       <table style="width: 100%; border-collapse: collapse;">
        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
@@ -78,7 +78,7 @@ app.post("/submit", upload.single("fileToUpload"), (req, res) => {
   const file = req.file;
   const mailOptions = {
     from: "ibrahimyounes646@gmail.com",
-    to: ["ibrahimyounes646@gmail.com", "digitalmedia@ajman.ae"],
+    to: ["ibrahimyounes646@gmail.com", "maitha.alhosani@ajman.ae"],
     subject: "Thank you for your submission!",
     html: generateEmailTemplate(data, file),
     attachments: file
